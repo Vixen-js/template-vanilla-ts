@@ -5,6 +5,7 @@ import {
   FlexLayout,
   QPixmap,
   AlignmentFlag,
+  QIcon,
 } from "@vixen-js/core";
 import styles from "./styles/styles.css?raw";
 import path from "path";
@@ -15,6 +16,7 @@ const win = new QMainWindow();
 win.setWindowTitle("Vixen UI Template");
 win.setFixedWidth(800);
 win.setFixedHeight(600);
+win.setWindowIcon(new QIcon(`${images}/typescript.svg`));
 
 const root = new QWidget();
 const flex = new FlexLayout();
