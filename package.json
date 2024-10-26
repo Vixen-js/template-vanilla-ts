@@ -4,9 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "qode --watch ./dist/main.cjs",
+    "dev": "nodemon --quite",
     "build": "tsc && vite build",
-    "watch": "pnpm build --watch",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
