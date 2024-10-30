@@ -7,11 +7,14 @@
     "dev": "nodemon --quite",
     "build": "tsc && vite build",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "bundle": "vixen-pkg --initialize vixen-app",
+    "release": "vixen-pkg --build ./dist"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "@types/node": "^22.7.7",
+    "@vixen-js/bundler": "^0.1.3",
     "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",

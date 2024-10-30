@@ -8,16 +8,18 @@ This template contains the basic structure of a Vixen Vanilla TS project.
 
 ## Usage
 
-To start developing, we recommend to have 2 terminals open. The first start the compiler in watch mode and the second starts the development environment.
-
-### Terminal 1:
-
-```bash
-pnpm watch
-```
-
-### Terminal 2:
+To start developing run the following command
 
 ```bash
 pnpm dev
+```
+
+# Bundling for distribution
+
+To bundle the application and generate the release files run the following command
+
+```bash
+pnpm build
+pnpm bundle
+pnpm release
 ```
