@@ -7,16 +7,15 @@ import {
   AlignmentFlag,
   QIcon,
 } from "@vixen-js/core";
-import styles from "./styles/styles.css?raw";
-import path from "path";
-
-const images = path.resolve(__dirname, "./images");
+import styles from "./assets/styles/styles.css?raw";
+import tsImage from "./assets/images/typescript.svg?url";
+import logoImg from "./assets/images/Logo.png?url";
 
 const win = new QMainWindow();
 win.setWindowTitle("Vixen UI Template");
 win.setFixedWidth(800);
 win.setFixedHeight(600);
-win.setWindowIcon(new QIcon(`${images}/typescript.svg`));
+win.setWindowIcon(new QIcon(tsImage));
 
 const root = new QWidget();
 const flex = new FlexLayout();
@@ -24,18 +23,18 @@ root.setLayout(flex);
 root.setObjectName("root");
 
 const label = new QLabel();
-label.setText("Hello, Vixen!");
+label.setText("Hello, Vixen Ui!");
 label.setObjectName("label1");
 
 const labelImage = new QLabel();
 labelImage.setObjectName("image");
-labelImage.setPixmap(new QPixmap(`${images}/Logo.png`).scaled(100, 100));
+labelImage.setPixmap(new QPixmap(logoImg).scaled(100, 100));
 labelImage.setAlignment(AlignmentFlag.AlignCenter);
 labelImage.setFixedSize(100, 100);
 
 const label2 = new QLabel();
 label2.setObjectName("label2");
-label2.setText("Open your main.ts and write some code!");
+label2.setText("Open your main.ts and write some code to see the changes!");
 
 flex.addWidget(label);
 flex.addWidget(labelImage);
@@ -45,4 +44,4 @@ win.setCentralWidget(root);
 win.setStyleSheet(String(styles));
 win.show();
 
-globalThis.win = win;
+global.win = win;

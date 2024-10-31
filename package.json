@@ -3,19 +3,22 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "types": "dist/main.d.ts",
   "scripts": {
-    "dev": "nodemon --quiet",
-    "build": "tsc && vite build",
+    "dev": "rimraf ./dist && nodemon --quiet",
+    "build": "node ./build.mjs",
     "lint": "eslint .",
     "format": "prettier --write .",
     "bundle": "vixen-pkg --initialize vixen-app",
     "release": "vixen-pkg --build ./dist",
-    "postinstall": "node ./scripts/postInstall.mjs"
+    "build:types": "tsc --esModuleInterop --emitDeclarationOnly --declaration --outDir ./dist src/main.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "@types/node": "^22.7.7",
     "@vixen-js/bundler": "^0.1.3",
+    "@vixen-js/plugin-import-flat": "^0.1.0",
+    "esbuild": "^0.24.0",
     "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
@@ -24,9 +27,7 @@
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
     "typescript": "^5.5.3",
-    "typescript-eslint": "^8.10.0",
-    "vite": "^5.4.8",
-    "vite-plugin-externalize-dependencies": "^1.0.1"
+    "typescript-eslint": "^8.10.0"
   },
   "peerDependencies": {
     "@vixen-js/core": "^0.1.3"
