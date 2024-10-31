@@ -4,5 +4,5 @@
         "node_modules",
         "dist"
     ],
-    "exec": "pnpm build && qode ./dist/main.cjs"
+    "exec": "$npm_execpath build && qode ./dist/main.cjs"
 }
