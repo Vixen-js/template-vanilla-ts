@@ -27,6 +27,6 @@
     "vite-plugin-externalize-dependencies": "^1.0.1"
   },
   "peerDependencies": {
-    "@vixen-js/core": "^0.1.2"
+    "@vixen-js/core": "^0.1.3"
   }
 }
