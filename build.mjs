@@ -1,5 +1,6 @@
 import * as esbuild from "esbuild";
 import importFlat from "@vixen-js/plugin-import-flat";
+import vixenAssets from "@vixen-js/plugin-vixen-assets";
 
 try {
   await esbuild.build({
@@ -15,14 +16,7 @@ try {
     minify: true,
     tsconfig: "./tsconfig.json",
     packages: "external",
-    plugins: [
-      importFlat(),
-      importFlat({
-        filterRegexp: /\?url$/,
-        namespace: Math.random().toString(36).slice(2),
-        transform: async (_content, args) => args.path,
-      }),
-    ],
+    plugins: [importFlat(), vixenAssets()],
   });
 } catch (e) {
   console.error(e);

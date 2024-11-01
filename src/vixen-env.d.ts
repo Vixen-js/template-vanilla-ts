@@ -9,9 +9,17 @@ declare module "*?raw" {
 }
 
 /**
- * Load resource as a URL
+ * Load Png Images
  */
-declare module "*?url" {
+declare module "*.png" {
+  const data: string;
+  export default data;
+}
+
+/**
+ * Load Svg Images
+ */
+declare module "*.svg" {
   const data: string;
   export default data;
 }

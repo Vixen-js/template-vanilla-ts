@@ -8,8 +8,8 @@ import {
   QIcon,
 } from "@vixen-js/core";
 import styles from "./assets/styles/styles.css?raw";
-import tsImage from "./assets/images/typescript.svg?url";
-import logoImg from "./assets/images/Logo.png?url";
+import tsImage from "./assets/images/typescript.svg";
+import logoImg from "./assets/images/Logo.png";
 
 const win = new QMainWindow();
 win.setWindowTitle("Vixen UI Template");
