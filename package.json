@@ -31,6 +31,6 @@
     "typescript-eslint": "^8.10.0"
   },
   "peerDependencies": {
-    "@vixen-js/core": "^0.3.0"
+    "@vixen-js/core": "^0.3.3"
   }
 }
